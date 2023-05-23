@@ -19,15 +19,14 @@ public class ConsistentHash<T> {
      */
     private final int numberOfReplicas;
 
-    private final SortedMap<Integer, T> circle = new TreeMap();
+    private final SortedMap<Integer, T> circle = new TreeMap<>();
 
     /**
      * hash算法，考虑效率使用murmur3_32.
      */
-    private final HashFunction hash = Hashing.murmur3_32();
+    private final HashFunction hash = Hashing.murmur3_128();
 
-    public ConsistentHash(int numberOfReplicas,
-                          Collection<T> nodes) {
+    public ConsistentHash(int numberOfReplicas, Collection<T> nodes) {
         this.numberOfReplicas = numberOfReplicas;
         for (T node : nodes) {
             add(node);

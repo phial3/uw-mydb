@@ -5,24 +5,21 @@
     <springProperty scope="context" name="appVersion" source="project.version"
                     defaultValue=""/>
     <springProfile name="default">
-        <include
-                resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
         <root level="INFO">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>
 
     <springProfile name="test">
-        <include
-                resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
         <root level="INFO">
             <appender-ref ref="CONSOLE"/>
         </root>
     </springProfile>
 
     <springProfile name="prod">
-        <include
-                resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+        <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
         <appender name="ES"
                   class="uw.logback.es.appender.ElasticSearchAppender">
             <esHost>http://10.8.8.50:9200</esHost>
