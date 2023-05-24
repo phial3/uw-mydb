@@ -4,6 +4,7 @@ package uw.mydb.mysql;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uw.mydb.mysql.util.ConcurrentBag;
 import uw.mydb.protocol.packet.*;
@@ -39,7 +40,7 @@ public class MySqlSession implements ConcurrentBag.IConcurrentBagEntry {
     /**
      * logger
      */
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(MySqlSession.class);
+    private static final Logger logger = LoggerFactory.getLogger(MySqlSession.class);
 
     /**
      * 并发状态更新。

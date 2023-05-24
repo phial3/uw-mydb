@@ -2,6 +2,7 @@ package uw.mydb.route;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import org.apache.logging.log4j.util.Strings;
+import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uw.mydb.conf.MydbConfig;
 import uw.mydb.conf.MydbConfigManager;
@@ -26,7 +27,7 @@ import java.util.stream.Collectors;
  */
 public class SchemaCheckService {
 
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(SchemaCheckService.class);
+    private static final Logger logger = LoggerFactory.getLogger(SchemaCheckService.class);
 
     /**
      * 存储当前数据库中已经建立好的库表结构。
