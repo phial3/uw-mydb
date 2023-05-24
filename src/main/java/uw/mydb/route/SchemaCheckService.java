@@ -1,7 +1,6 @@
 package uw.mydb.route;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import org.apache.http.conn.routing.RouteInfo;
 import org.apache.logging.log4j.util.Strings;
 import org.slf4j.LoggerFactory;
 import uw.mydb.conf.MydbConfig;
