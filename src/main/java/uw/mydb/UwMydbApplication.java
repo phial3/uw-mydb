@@ -1,13 +1,16 @@
 package uw.mydb;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import uw.mydb.mysql.MySqlGroupManager;
 import uw.mydb.proxy.ProxyServer;
 import uw.mydb.route.RouteManager;
 import uw.mydb.route.SchemaCheckService;
 
-@SpringCloudApplication
+/**
+ * @author admin
+ */
+@SpringBootApplication
 public class UwMydbApplication {
 
     public static void main(String[] args) throws InterruptedException {

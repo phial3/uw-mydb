@@ -31,10 +31,10 @@ uw:
         balance-type: BALANCE_ALL_READ   # 读写分离类型
         masters:
          - weight: 1 #读取访问权重，默认为1.如果master主机不想承担读，可以设置为0
-           host: 192.168.88.88
+           host: 127.0.0.1
            port: 3306                  # port
            user: root                  # 用户名
-           password: AtqRpgPJN6bdZ!eT            # 密码
+           password: 123456aA#         # 密码
            min-conn: 20                   # 最小连接
            max-conn: 500                 # 最大连接
            max-retry: 3            # 连接重试次数
